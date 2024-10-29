@@ -13,7 +13,7 @@ def they_apply_for_a_loan(context, amount):
     query_params = {'customerId': context.user, 'amount': amount, 'downPayment': 10, 'fromAccountId': 12345}
 
     context.response = requests.post(
-        f'https://parabank.parasoft.com/parabank/services/bank/requestLoan',
+        f'http://localhost:8080/parabank/services/bank/requestLoan',
         headers=headers,
         params=query_params
     )
